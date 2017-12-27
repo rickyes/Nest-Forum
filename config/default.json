@@ -1,0 +1,15 @@
+{
+    "console": true,
+    "Mysql": {
+        "type": "mysql",
+        "host": "localhost",
+        "username": "root",
+        "password": "XXX",
+        "database": "tsblog",
+        "entityPrefix": "ts_"
+    },
+    "Redis": {
+        "host": "localhost",
+        "auth": "XXX"
+    }
+}

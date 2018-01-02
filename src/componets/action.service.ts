@@ -2,7 +2,7 @@ import { Component } from '@nestjs/common';
 import { Pool } from '../dao/pool';
 import { Action } from '../entitys/index';
 import { Validate, decorateArmour } from '../utils/enumerables';
-import { ActionCreateDto } from '../schemas/action.craete';
+import { ActionCreateDto } from '../schemas/action.create';
 
 @Component()
 export class ActionService {
@@ -14,7 +14,7 @@ export class ActionService {
      * 获取该用户所有操作
      * @param userId 用户id
      */
-    async getAllByUserId(userId: number, time: Date){
+    async getAllByUserId(userId: number, time?: Date){
         this.db = await Pool.getInstance();
         this.actionRepository = this.db.getRepository(Action);
         const actions = await this.actionRepository.find({ user_id: userId });

@@ -32,4 +32,46 @@ export class ActionService {
         return this.actionRepository.save(action);
     }
 
+    /**
+     * 修改动态
+     * @param param 动态
+     */
+    async update(param: ActionCreateDto){
+        this.db = await Pool.getInstance();
+        this.actionRepository = this.db.getRepository(Action);
+        try {
+            return this.actionRepository.update({
+                id: param.id,
+            }, param);
+        } catch (error) {
+            console.log('更新动态失败', error);
+            return {};
+        }
+    }
+
+    /**
+     * 根据动态id删除动态
+     * @param id 动态id
+     */
+    async delete(id: number){
+        this.db = await Pool.getInstance();
+        this.actionRepository = this.db.getRepository(Action);
+        try {
+            return this.actionRepository.removeById(id);
+        } catch (error) {
+            console.log('删除动态成功', error);
+            return {};
+        }
+    }
+
+    /**
+     * 根据动态id查找动态详情
+     * @param id 动态id
+     */
+    async findById(id: number){
+        this.db = await Pool.getInstance();
+        this.actionRepository = this.db.getRepository(Action);
+        return this.actionRepository.findOne(id);
+    }
+
 }

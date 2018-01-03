@@ -40,3 +40,22 @@ export function decorateArmour(target, key, descriptor) {
     };
     return descriptor;
 }
+
+/**
+ * 根据数组元素的属性排序数组
+ * @param propName 属性
+ * @param pattern 运算符
+ */
+export function sortByProp(propName, pattern = '>') {
+    let sortFunc: any;
+    sortFunc =  (obj1, obj2) => {
+        if (eval(`${obj1[propName]} ${pattern} ${obj2[propName]}`)) {
+            return 1;
+        } else if (obj1[propName] === obj2[propName]) {
+            return 0;
+        } else {
+            return -1;
+        }
+    };
+    return sortFunc;
+}

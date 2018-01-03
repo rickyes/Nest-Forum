@@ -48,6 +48,9 @@
         "one-line": [
             false
         ],
+        "no-eval": [
+            false
+        ],
         "one-variable-per-declaration": [
             false
         ]

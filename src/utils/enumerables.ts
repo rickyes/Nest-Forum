@@ -59,3 +59,13 @@ export function sortByProp(propName, pattern = '>') {
     };
     return sortFunc;
 }
+
+/**
+ * 生成判断对象类型的高阶函数
+ * @param type 对象类型
+ */
+export function isType(type){
+ return function(obj){
+   return Object.prototype.toString.call(obj) == `[object ${type}]`;
+ };
+}

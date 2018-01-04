@@ -33,6 +33,8 @@
         ],
         "no-empty-interface": false,
         "no-empty": false,
+        "triple-equals": false,
+        "only-arrow-functions": false,
         "arrow-parens": false,
         "object-literal-sort-keys": false,
         "no-unused-expression": false,

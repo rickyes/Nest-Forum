@@ -38,6 +38,7 @@
         "arrow-parens": false,
         "object-literal-sort-keys": false,
         "no-unused-expression": false,
+        "no-shadowed-variable": false,
         "max-classes-per-file": [
             false
         ],

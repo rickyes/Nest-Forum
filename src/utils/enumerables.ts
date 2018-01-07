@@ -29,6 +29,11 @@ export class Validate {
     }
 }
 
+/**
+*
+* 装饰器测试
+*
+**/
 export function decorateArmour(target, key, descriptor) {
     const method = descriptor.value;
     const moreDef = 100;

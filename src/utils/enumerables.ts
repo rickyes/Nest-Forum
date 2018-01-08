@@ -30,10 +30,11 @@ export class Validate {
 }
 
 /**
-*
-* 装饰器测试
-*
-**/
+ *  装饰器测试
+ * @param target 目标对象
+ * @param key key
+ * @param descriptor 装饰过的对象
+ */
 export function decorateArmour(target, key, descriptor) {
     const method = descriptor.value;
     const moreDef = 100;

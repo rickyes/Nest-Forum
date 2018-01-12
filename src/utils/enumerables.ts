@@ -105,3 +105,12 @@ export function numberByArray(array: any[], the: any) {
     });
     return c.length;
 }
+
+/**
+ * 比较两个整形数组
+ * @param a 数组a
+ * @param b 数组b
+ */
+export function isEqual(a: number[],b: number[]): boolean{
+    return _.isEqual(a.sort(),b.sort());
+}

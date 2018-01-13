@@ -20,6 +20,11 @@ export class ZipCodeValidator implements StringValidator {
     }
 }
 
+/**
+*
+* 验证器
+*
+**/
 export class Validate {
     static id(id: any) {
         if (numberRegexp.test(id)) {

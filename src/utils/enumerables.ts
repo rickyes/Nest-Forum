@@ -1,12 +1,11 @@
-
-interface StringValidator {
-    isPass(s: string): boolean;
-}
-
 import * as _ from 'lodash';
 
 const lettersRegexp = /^[A-Za-z]+$/;
 const numberRegexp = /^[0-9]+$/;
+
+interface StringValidator {
+    isPass(s: string): boolean;
+}
 
 export class LettersOnLyValidator implements StringValidator {
     isPass(s: string) {
